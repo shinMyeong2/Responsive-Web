@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            * {margin:0; padding:0; font-size:100%;}
+
+            #para {
+                font-size: 6em;
+            }
+            #para p {
+                font-size: 1em;
+                /* 상속문제를 해결하기 위해 공식 사용 */
+                /* 64px ÷ 64px */
+                /* 1em(rem) = 16px */
+            }
+            #para span {
+                font-size: 6rem;
+                /* rem 상속문제 없음 */
+            }
+        </style>
+        <title>Document</title>
+    </head>
+    <body>
+        <div id="para">
+            가변 폰트1
+            <p>가변 폰트2</p>
+            <span>가변 폰트3</span>
+        </div>
+    </body>
+</html>

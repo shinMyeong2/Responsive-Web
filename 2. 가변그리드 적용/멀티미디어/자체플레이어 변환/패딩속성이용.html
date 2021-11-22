@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            * {margin:0; padding:0;}
+
+            video, iframe {
+                width: 100%;
+                max-width: 100%;
+                /* 멀티미디어 가변 요소 적용 */
+            }
+
+            #wrap {
+                position: relative;
+                /* absolute기준 지정 */
+                padding-bottom:56.25%;
+                /* 9 ÷ 16 */
+                /* 모니터 국제 표준 16:9 */
+                /* 패딩으로 틀을 만들어 멀티미디어 변환 */
+                height: 0;
+                overflow: hidden;
+            }
+
+            iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+            }
+        </style>
+        <title>Document</title>
+    </head>
+    <body>
+        <div id="wrap">
+            <iframe src="https://player.vimeo.com/video/192526798?byline=0&badge=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div>
+    </body>
+</html>

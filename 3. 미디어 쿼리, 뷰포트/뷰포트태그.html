@@ -1,0 +1,23 @@
+<!-- 뷰포트 메타 태그 -->
+<meta name="viewport" content="width=device-width, initial-scale=1,
+minimum-scale=1, maximum-scale=1, user-scalable=no">
+<!--
+    width : 뷰포트의 너비 설정 | device-width, 양수
+    height : 뷰포트의 높이 설정 | device-height, 양수
+    initial-scale : 초기 배율 설정 | 1(default), 양수
+    minimum-scale : 최소 축소 비율 설정 | 0.25(default), 양수
+    maximum-scale : 최대 확대 비율 설정 | 5.0(default), 양수
+    user-scalable : 확대/축소 여부 설정 | yes(default), no
+-->
+
+<!-- W3C 뷰포트 표준 기술 -->
+<style>
+    @viewport {
+        width: device-width; /* width와 동일 */
+        zoom: 1; /* initial-scale과 동일 */
+        min-zoom: 1; /* minimum-scale과 동일 */
+        max-zoom: 1; /* maximum-scale과 동일 */
+        user-zoom: zoom; /* user-scalable과 동일 */
+    }
+</style>
+<!-- 뷰포트 메타 태그가 더 선호되어 잘 사용되지 않음 -->

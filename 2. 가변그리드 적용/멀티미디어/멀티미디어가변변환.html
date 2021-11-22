@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            * {margin:0; padding:0;}
+
+            #wrap {
+                width: 90%;
+                /* 960px */
+                margin: 0 auto;
+                border: 4px solid #000;
+            }
+            #wrap div {
+                width: 50%;
+                display: inline-block;
+            }
+
+            img, video {
+                width: 100%;
+                max-width: 100%;
+                /* 멀티미디어 가변 요소 적용 */
+            }
+        </style>
+        <title>Document</title>
+    </head>
+    <body>
+        <div id="wrap">
+            <div>
+                <video controls preload="auto">
+                    <source src="source/video.mp4" type='video/mp4'></source>
+			        <source src="source/video.ogv" type='video/ogg'></source>
+			        <source src="source/video.webm" type='video/webm'></source>
+                </video>
+            </div><div>
+                <img src="source/img_01.jpg">
+            </div>
+        </div>
+    </body>
+</html>
