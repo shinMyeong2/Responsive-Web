@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            * {margin:0; padding:0;}
+
+            #wrap {
+                display: flex;
+                width: 90%;
+                height: 500px;
+                margin: 0 auto;
+                border: 4px solid #000;
+            }
+            #wrap div {
+                width: 33.33%;
+            }
+            /*
+            order: 정숫값;
+                  0(기본값)
+            
+            입력된 값의 순서대로 배치
+            동일한 값일 경우, 태그 순서 적용
+            음숫값 입력시 기본값인 0 적용
+            */
+            #wrap div:first-child {
+                order: 3;
+                background: #eb4a42;
+            }
+            #wrap div:nth-child(2) {
+                order: 1;
+                background: #1488c8;
+            }
+            #wrap div:nth-child(3) {
+                order: 2;
+                background: #f7e041;
+            }
+        </style>
+        <title>Document</title>
+    </head>
+    <body>
+        <div id="wrap">
+            <div></div><div></div><div></div>
+        </div>
+    </body>
+</html>

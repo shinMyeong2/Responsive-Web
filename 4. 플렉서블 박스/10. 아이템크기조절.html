@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            * {margin:0; padding:0;}
+
+            #wrap {
+                display: flex;
+                width: 90%;
+                height: 500px;
+                margin: 0 auto;
+                border: 4px solid #000;
+            }
+            /*
+            flex: [flex-grow] [flex-shrink] [flex-basis];
+
+            0 1 auto(기본값)
+            0 auto(0 1 auto와 같음)
+            initial(0 1 auto와 같음)
+            auto(1 1 auto와 같음)
+            none(0 0 auto와 같음)
+
+            flex-grow : 부모박스에 여백이 있을 때 아이템의 크기를 늘일 수 있는 속성
+                        속성값은 비율로 설정, 단, 음숫값 사용불가, width, flex-basis 값에 따라 크기가 변할 수 있음
+                        ex) 부모박스 안에 자식박스가 세 개, 각각 1, 1, 2로 설정하면 남는 공간을 4등분하여
+                        각각 1/4, 1/4, 2/4 만큼 기본 크기에 더함
+
+            flex-shrink : 부모박스 안의 아이템의 크기가 넘칠 경우 크기를 줄일 수 있는 속성
+                        속성값은 비율로 설정, 단, 음숫값 사용불가, width, flex-basis 값에 따라 크기가 변할 수 있음
+                        ex) 부모박스 안에 자식박스가 세 개, 각각 1, 1, 2로 설정하면 넘치는 공간을 4등분하여
+                        각각 1/4. 1/4. 2/4 만큼 기본 크기에서 뺌
+
+            flex-basis : 아이템의 기본 크기를 설정하기 위한 속성
+                        width 속성에서 사용할 수 있는 모든 값 사용가능, 단, 음숫값 사용불가
+                        ex) 값을 0으로 설정할 경우 아이템에 flex-grow, flex-shrink 값에서 설정한 비율이 그대로 적용
+                            auto로 설정할 경우 아이템이 기본적으로 가지고 있는 크기를 기준으로 flex-grow, flex-shrink 값에서 설정한 비율이 적용
+            */
+            #wrap div:first-child {
+                flex: 1 1 0;
+                background: #eb4a42;
+            }
+            #wrap div:nth-child(2) {
+                flex: 1 1 0;
+                background: #1488c8;
+            }
+            #wrap div:nth-child(3) {
+                flex: 2 2 0;
+                background: #f7e041;
+            }
+        </style>
+        <title>Document</title>
+    </head>
+    <body>
+        <div id="wrap">
+            <div></div><div></div><div></div>
+        </div>
+    </body>
+</html>
